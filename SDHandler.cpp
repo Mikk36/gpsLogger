@@ -65,9 +65,10 @@ void SDHandler::logData(const std::string data) {
     _log("logData: _checkNewDate is true\n");
     if(_active) {
       _log("logData: _active is true\n");
-      if(!_firstTime) {
-        ++_fileNumber;
+      if(_firstTime) {
         _firstTime = false;
+      } else {
+        ++_fileNumber;
       }
       _closeFile();
       _openFile();
