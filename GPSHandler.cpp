@@ -59,7 +59,8 @@ void GPSHandler::loop() {
       }
 
       if(_bufferI > NMEA_LENGTH) {
-        wd.Service();
+        //wd.Service();
+        _sd->logData(_gpsBuffer);
         _log("Buffer overflow, clearing\n");
         _bufferI = 0;
         _gpsBuffer[0] = 0;
