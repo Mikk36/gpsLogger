@@ -3,6 +3,6 @@
 #define REDUCED_SD_LOGGING false
 #define GPS_RATE_FAST 200
 #define GPS_RATE_SLOW 2000
-#define SD_TESTING true
+#define SD_TESTING false
 #define DEBUG_LOGGING true
 #define DEBUG_LOGGING_2 false

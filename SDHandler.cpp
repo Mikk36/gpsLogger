@@ -219,7 +219,6 @@ bool SDHandler::_parseGGA(const std::string &data) {
   // $GPGGA ,121349.693 ,5926.2671 ,N ,02452.6428 ,E ,1 ,5 ,1.36 ,74.2 ,M  ,19.7 ,M  ,   ,   *60
   // 0      ,1          ,2         ,3 ,4          ,5 ,6 ,7 ,8    ,9    ,10 ,11   ,12 ,13 ,14
 
-  /*
   std::string newHour = data.substr(7, 2);
   //_log("Old: %s New: %s\n", _oldHour.c_str(), newHour.c_str());
   _log("Old: %s New: %s\n", _oldHour.c_str(), newHour.c_str());
@@ -229,21 +228,6 @@ bool SDHandler::_parseGGA(const std::string &data) {
   }
 
   if(newHour.compare(_oldHour) < 0) {
-    _oldHour = newHour;
-    _log("New day!\n");
-    return true;
-  }
-  */
-
-  std::string newHour = data.substr(9, 2);
-  //_log("Old: %s New: %s\n", _oldHour.c_str(), newHour.c_str());
-  _log("Old: %s New: %s\n", _oldHour.c_str(), newHour.c_str());
-
-  if(newHour.compare(_oldHour) != 0) {
-    _dateRecheck = true;
-  }
-
-  if(newHour.compare(_oldHour) != 0) {
     _oldHour = newHour;
     _log("New day!\n");
     return true;
