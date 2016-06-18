@@ -2,3 +2,5 @@
 /.objsRelease/
 /build/
 /Release/
+*.elay
+*.depend
